@@ -1,0 +1,870 @@
+{
+  "align_id": "demo-0001",
+  "scene": "conf",
+  "domain": "poli",
+  "pair": "zh-es",
+  "session_no": "0001",
+  "seg_no": "seg001",
+  "src_audio": "sample/zh_conf_poli_0001_seg001_src.wav",
+  "tgt_audio": "sample/zh_conf_poli_0001_seg001_tgt.wav",
+  "sentences": [
+    {
+      "sent_id": 1,
+      "src": {
+        "start_ms": "00:00:04,000",
+        "end_ms": "00:00:07,900",
+        "text": "欢迎各位来到滨海市博物馆。"
+      },
+      "tgt": {
+        "start_ms": "00:00:04,000",
+        "end_ms": "00:00:07,900",
+        "text": "Bienvenidos al Museo de la Ciudad de Binhai."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 2,
+      "src": {
+        "start_ms": "00:00:08,000",
+        "end_ms": "00:00:11,900",
+        "text": "本馆收藏着这座城市两千年的记忆。"
+      },
+      "tgt": {
+        "start_ms": "00:00:08,000",
+        "end_ms": "00:00:11,900",
+        "text": "Este museo conserva la memoria de dos mil años de la ciudad."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 3,
+      "src": {
+        "start_ms": "00:00:12,000",
+        "end_ms": "00:00:15,900",
+        "text": "展厅分为四个部分，沿时间顺序排列。"
+      },
+      "tgt": {
+        "start_ms": "00:00:12,000",
+        "end_ms": "00:00:15,900",
+        "text": "Las salas de exposición se dividen en cuatro secciones, ordenadas cronológicamente."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 4,
+      "src": {
+        "start_ms": "00:00:16,000",
+        "end_ms": "00:00:19,900",
+        "text": "第一件展品是一艘出土的独木舟。"
+      },
+      "tgt": {
+        "start_ms": "00:00:16,000",
+        "end_ms": "00:00:19,900",
+        "text": "La primera pieza es una canoa excavada."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 5,
+      "src": {
+        "start_ms": "00:00:20,000",
+        "end_ms": "00:00:23,900",
+        "text": "它来自公元前三世纪的渔村遗址。"
+      },
+      "tgt": {
+        "start_ms": "00:00:20,000",
+        "end_ms": "00:00:23,900",
+        "text": "Procede de un yacimiento pesquero del siglo tercero antes de nuestra era."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 6,
+      "src": {
+        "start_ms": "00:00:24,000",
+        "end_ms": "00:00:27,900",
+        "text": "考古队在河道清淤时发现了它。"
+      },
+      "tgt": {
+        "start_ms": "00:00:24,000",
+        "end_ms": "00:00:27,900",
+        "text": "El equipo arqueológico la descubrió durante el dragado del canal."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 7,
+      "src": {
+        "start_ms": "00:00:28,000",
+        "end_ms": "00:00:31,900",
+        "text": "船体由整块木材凿成，没有拼接。"
+      },
+      "tgt": {
+        "start_ms": "00:00:28,000",
+        "end_ms": "00:00:31,900",
+        "text": "El casco está tallado en una sola pieza de madera, sin ensamblajes."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 8,
+      "src": {
+        "start_ms": "00:00:32,000",
+        "end_ms": "00:00:35,900",
+        "text": "接下来的展柜里是历代的盐业文书。"
+      },
+      "tgt": {
+        "start_ms": "00:00:32,000",
+        "end_ms": "00:00:35,900",
+        "text": "En las vitrinas siguientes se conservan documentos salineros de distintas dinastías."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 9,
+      "src": {
+        "start_ms": "00:00:36,000",
+        "end_ms": "00:00:39,900",
+        "text": "盐税曾是这座城市最主要的收入。"
+      },
+      "tgt": {
+        "start_ms": "00:00:36,000",
+        "end_ms": "00:00:39,900",
+        "text": "El impuesto sobre la sal fue la principal fuente de ingresos de la ciudad."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 10,
+      "src": {
+        "start_ms": "00:00:40,000",
+        "end_ms": "00:00:43,900",
+        "text": "文书上的印章保存得相当完整。"
+      },
+      "tgt": {
+        "start_ms": "00:00:40,000",
+        "end_ms": "00:00:43,900",
+        "text": "Los sellos de los documentos se conservan bastante completos."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 11,
+      "src": {
+        "start_ms": "00:00:44,000",
+        "end_ms": "00:00:47,900",
+        "text": "这里展示的是宋代的市舶司遗址模型。"
+      },
+      "tgt": {
+        "start_ms": "00:00:44,000",
+        "end_ms": "00:00:47,900",
+        "text": "Aquí se exhibe una maqueta del yacimiento de la oficina de navegación de la dinastía Song."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 12,
+      "src": {
+        "start_ms": "00:00:48,000",
+        "end_ms": "00:00:51,900",
+        "text": "当时的商船从这里出发，前往东南亚。"
+      },
+      "tgt": {
+        "start_ms": "00:00:48,000",
+        "end_ms": "00:00:51,900",
+        "text": "Los barcos mercantes partían de aquí hacia el sudeste asiático."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 13,
+      "src": {
+        "start_ms": "00:00:52,000",
+        "end_ms": "00:00:55,900",
+        "text": "模型按一比五十的比例制作。"
+      },
+      "tgt": {
+        "start_ms": "00:00:52,000",
+        "end_ms": "00:00:55,900",
+        "text": "La maqueta está realizada a escala uno a cincuenta."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 14,
+      "src": {
+        "start_ms": "00:00:56,000",
+        "end_ms": "00:00:59,900",
+        "text": "展柜旁边有一块出土的船板。"
+      },
+      "tgt": {
+        "start_ms": "00:00:56,000",
+        "end_ms": "00:00:59,900",
+        "text": "Junto a la vitrina hay una tablazón naval excavada."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 15,
+      "src": {
+        "start_ms": "00:00:60,000",
+        "end_ms": "00:00:63,900",
+        "text": "船板上的榫卯结构清晰可见。"
+      },
+      "tgt": {
+        "start_ms": "00:00:60,000",
+        "end_ms": "00:00:63,900",
+        "text": "Las uniones de caja y espiga son claramente visibles en la tablazón."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 16,
+      "src": {
+        "start_ms": "00:00:64,000",
+        "end_ms": "00:00:67,900",
+        "text": "第二部分讲的是明清时期的海防。"
+      },
+      "tgt": {
+        "start_ms": "00:00:64,000",
+        "end_ms": "00:00:67,900",
+        "text": "La segunda sección trata de la defensa costera durante las dinastías Ming y Qing."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 17,
+      "src": {
+        "start_ms": "00:00:68,000",
+        "end_ms": "00:00:71,900",
+        "text": "沿海修筑了多座烽火台。"
+      },
+      "tgt": {
+        "start_ms": "00:00:68,000",
+        "end_ms": "00:00:71,900",
+        "text": "Se construyeron varias torres de señales a lo largo de la costa."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 18,
+      "src": {
+        "start_ms": "00:00:72,000",
+        "end_ms": "00:00:75,900",
+        "text": "这些炮台的射程覆盖整个港湾。"
+      },
+      "tgt": {
+        "start_ms": "00:00:72,000",
+        "end_ms": "00:00:75,900",
+        "text": "El alcance de estas baterías cubría toda la bahía."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 19,
+      "src": {
+        "start_ms": "00:00:76,000",
+        "end_ms": "00:00:79,900",
+        "text": "展厅中央陈列着一门铁炮。"
+      },
+      "tgt": {
+        "start_ms": "00:00:76,000",
+        "end_ms": "00:00:79,900",
+        "text": "En el centro de la sala se exhibe un cañón de hierro."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 20,
+      "src": {
+        "start_ms": "00:00:80,000",
+        "end_ms": "00:00:83,900",
+        "text": "炮身上的铭文记录了铸造年份。"
+      },
+      "tgt": {
+        "start_ms": "00:00:80,000",
+        "end_ms": "00:00:83,900",
+        "text": "La inscripción del cañón registra el año de fundición."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 21,
+      "src": {
+        "start_ms": "00:00:84,000",
+        "end_ms": "00:00:87,900",
+        "text": "它在一九八七年由渔民打捞出水。"
+      },
+      "tgt": {
+        "start_ms": "00:00:84,000",
+        "end_ms": "00:00:87,900",
+        "text": "Fue recuperado del agua por unos pescadores en mil novecientos ochenta y siete."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 22,
+      "src": {
+        "start_ms": "00:00:88,000",
+        "end_ms": "00:00:91,900",
+        "text": "第三部分是近代的港口建设。"
+      },
+      "tgt": {
+        "start_ms": "00:00:88,000",
+        "end_ms": "00:00:91,900",
+        "text": "La tercera sección aborda la construcción portuaria moderna."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 23,
+      "src": {
+        "start_ms": "00:00:92,000",
+        "end_ms": "00:00:95,900",
+        "text": "一八六一年，这里开埠通商。"
+      },
+      "tgt": {
+        "start_ms": "00:00:92,000",
+        "end_ms": "00:00:95,900",
+        "text": "En mil ochocientos sesenta y uno se abrió este puerto al comercio."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 24,
+      "src": {
+        "start_ms": "00:00:96,000",
+        "end_ms": "00:00:99,900",
+        "text": "外国商行在岸边建起了仓库。"
+      },
+      "tgt": {
+        "start_ms": "00:00:96,000",
+        "end_ms": "00:00:99,900",
+        "text": "Las casas de comercio extranjeras levantaron almacenes en la ribera."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 25,
+      "src": {
+        "start_ms": "00:00:100,000",
+        "end_ms": "00:00:103,900",
+        "text": "这些建筑如今还剩七栋。"
+      },
+      "tgt": {
+        "start_ms": "00:00:100,000",
+        "end_ms": "00:00:103,900",
+        "text": "Todavía quedan siete de aquellos edificios."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 26,
+      "src": {
+        "start_ms": "00:00:104,000",
+        "end_ms": "00:00:107,900",
+        "text": "其中一栋改成了今天的博物馆。"
+      },
+      "tgt": {
+        "start_ms": "00:00:104,000",
+        "end_ms": "00:00:107,900",
+        "text": "Uno de ellos se transformó en el museo actual."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 27,
+      "src": {
+        "start_ms": "00:00:108,000",
+        "end_ms": "00:00:111,900",
+        "text": "墙面上保留着当年的砖砌纹理。"
+      },
+      "tgt": {
+        "start_ms": "00:00:108,000",
+        "end_ms": "00:00:111,900",
+        "text": "Los muros conservan la textura original de los ladrillos."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 28,
+      "src": {
+        "start_ms": "00:00:112,000",
+        "end_ms": "00:00:115,900",
+        "text": "天花板下的钢梁是后来加固的。"
+      },
+      "tgt": {
+        "start_ms": "00:00:112,000",
+        "end_ms": "00:00:115,900",
+        "text": "Las vigas de acero bajo el techo se añadieron después para reforzar la estructura."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 29,
+      "src": {
+        "start_ms": "00:00:116,000",
+        "end_ms": "00:00:119,900",
+        "text": "第四部分展示当代的城市规划。"
+      },
+      "tgt": {
+        "start_ms": "00:00:116,000",
+        "end_ms": "00:00:119,900",
+        "text": "La cuarta sección muestra la planificación urbana contemporánea."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 30,
+      "src": {
+        "start_ms": "00:00:120,000",
+        "end_ms": "00:00:123,900",
+        "text": "沙盘上可以看到未来十年的建设蓝图。"
+      },
+      "tgt": {
+        "start_ms": "00:00:120,000",
+        "end_ms": "00:00:123,900",
+        "text": "En la maqueta puede verse el plan de construcción para los próximos diez años."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 31,
+      "src": {
+        "start_ms": "00:00:124,000",
+        "end_ms": "00:00:127,900",
+        "text": "新区将建设三条地铁线路。"
+      },
+      "tgt": {
+        "start_ms": "00:00:124,000",
+        "end_ms": "00:00:127,900",
+        "text": "En el nuevo distrito se construirán tres líneas de metro."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 32,
+      "src": {
+        "start_ms": "00:00:128,000",
+        "end_ms": "00:00:131,900",
+        "text": "老城区的街道保持原有宽度。"
+      },
+      "tgt": {
+        "start_ms": "00:00:128,000",
+        "end_ms": "00:00:131,900",
+        "text": "Las calles del casco antiguo mantienen su anchura original."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 33,
+      "src": {
+        "start_ms": "00:00:132,000",
+        "end_ms": "00:00:135,900",
+        "text": "沿岸的湿地被划为保护区。"
+      },
+      "tgt": {
+        "start_ms": "00:00:132,000",
+        "end_ms": "00:00:135,900",
+        "text": "Los humedales costeros fueron declarados zona protegida."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 34,
+      "src": {
+        "start_ms": "00:00:136,000",
+        "end_ms": "00:00:139,900",
+        "text": "每年冬天有大批候鸟在此停留。"
+      },
+      "tgt": {
+        "start_ms": "00:00:136,000",
+        "end_ms": "00:00:139,900",
+        "text": "Cada invierno se detienen aquí grandes bandadas de aves migratorias."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 35,
+      "src": {
+        "start_ms": "00:00:140,000",
+        "end_ms": "00:00:143,900",
+        "text": "保护区里设置了观鸟屋。"
+      },
+      "tgt": {
+        "start_ms": "00:00:140,000",
+        "end_ms": "00:00:143,900",
+        "text": "En la reserva se instalaron observatorios de aves."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 36,
+      "src": {
+        "start_ms": "00:00:144,000",
+        "end_ms": "00:00:147,900",
+        "text": "参观者需要提前预约。"
+      },
+      "tgt": {
+        "start_ms": "00:00:144,000",
+        "end_ms": "00:00:147,900",
+        "text": "Los visitantes deben reservar con antelación."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 37,
+      "src": {
+        "start_ms": "00:00:148,000",
+        "end_ms": "00:00:151,900",
+        "text": "博物馆每周一闭馆。"
+      },
+      "tgt": {
+        "start_ms": "00:00:148,000",
+        "end_ms": "00:00:151,900",
+        "text": "El museo cierra los lunes."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 38,
+      "src": {
+        "start_ms": "00:00:152,000",
+        "end_ms": "00:00:155,900",
+        "text": "常规展览免费向公众开放。"
+      },
+      "tgt": {
+        "start_ms": "00:00:152,000",
+        "end_ms": "00:00:155,900",
+        "text": "Las exposiciones permanentes son gratuitas para el público."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 39,
+      "src": {
+        "start_ms": "00:00:156,000",
+        "end_ms": "00:00:159,900",
+        "text": "特展需要单独购票。"
+      },
+      "tgt": {
+        "start_ms": "00:00:156,000",
+        "end_ms": "00:00:159,900",
+        "text": "Las exposiciones temporales requieren una entrada aparte."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 40,
+      "src": {
+        "start_ms": "00:00:160,000",
+        "end_ms": "00:00:163,900",
+        "text": "语音导览提供四种语言。"
+      },
+      "tgt": {
+        "start_ms": "00:00:160,000",
+        "end_ms": "00:00:163,900",
+        "text": "La audioguía está disponible en cuatro idiomas."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 41,
+      "src": {
+        "start_ms": "00:00:164,000",
+        "end_ms": "00:00:167,900",
+        "text": "团队参观可以预约讲解员。"
+      },
+      "tgt": {
+        "start_ms": "00:00:164,000",
+        "end_ms": "00:00:167,900",
+        "text": "Los grupos pueden reservar un guía."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 42,
+      "src": {
+        "start_ms": "00:00:168,000",
+        "end_ms": "00:00:171,900",
+        "text": "讲解时长约为九十分钟。"
+      },
+      "tgt": {
+        "start_ms": "00:00:168,000",
+        "end_ms": "00:00:171,900",
+        "text": "La visita guiada dura aproximadamente noventa minutos."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 43,
+      "src": {
+        "start_ms": "00:00:172,000",
+        "end_ms": "00:00:175,900",
+        "text": "馆内的文创商店在出口处。"
+      },
+      "tgt": {
+        "start_ms": "00:00:172,000",
+        "end_ms": "00:00:175,900",
+        "text": "La tienda del museo se encuentra junto a la salida."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 44,
+      "src": {
+        "start_ms": "00:00:176,000",
+        "end_ms": "00:00:179,900",
+        "text": "商店里出售明信片和复制品。"
+      },
+      "tgt": {
+        "start_ms": "00:00:176,000",
+        "end_ms": "00:00:179,900",
+        "text": "En la tienda se venden postales y reproducciones."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 45,
+      "src": {
+        "start_ms": "00:00:180,000",
+        "end_ms": "00:00:183,900",
+        "text": "最受欢迎的是独木舟的模型。"
+      },
+      "tgt": {
+        "start_ms": "00:00:180,000",
+        "end_ms": "00:00:183,900",
+        "text": "El más popular es el modelo de la canoa."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 46,
+      "src": {
+        "start_ms": "00:00:184,000",
+        "end_ms": "00:00:187,900",
+        "text": "咖啡厅提供简餐和饮料。"
+      },
+      "tgt": {
+        "start_ms": "00:00:184,000",
+        "end_ms": "00:00:187,900",
+        "text": "La cafetería ofrece comidas ligeras y bebidas."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 47,
+      "src": {
+        "start_ms": "00:00:188,000",
+        "end_ms": "00:00:191,900",
+        "text": "露台可以看到整个港湾。"
+      },
+      "tgt": {
+        "start_ms": "00:00:188,000",
+        "end_ms": "00:00:191,900",
+        "text": "Desde la terraza se contempla toda la bahía."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 48,
+      "src": {
+        "start_ms": "00:00:192,000",
+        "end_ms": "00:00:195,900",
+        "text": "傍晚的景色尤其好看。"
+      },
+      "tgt": {
+        "start_ms": "00:00:192,000",
+        "end_ms": "00:00:195,900",
+        "text": "El paisaje al atardecer es especialmente bello."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 49,
+      "src": {
+        "start_ms": "00:00:196,000",
+        "end_ms": "00:00:199,900",
+        "text": "博物馆还开设面向学生的课程。"
+      },
+      "tgt": {
+        "start_ms": "00:00:196,000",
+        "end_ms": "00:00:199,900",
+        "text": "El museo también imparte cursos dirigidos a estudiantes."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 50,
+      "src": {
+        "start_ms": "00:00:200,000",
+        "end_ms": "00:00:203,900",
+        "text": "课程内容包括考古绘图和文物修复。"
+      },
+      "tgt": {
+        "start_ms": "00:00:200,000",
+        "end_ms": "00:00:203,900",
+        "text": "Los cursos incluyen dibujo arqueológico y restauración de objetos."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 51,
+      "src": {
+        "start_ms": "00:00:204,000",
+        "end_ms": "00:00:207,900",
+        "text": "每年暑期招募志愿者。"
+      },
+      "tgt": {
+        "start_ms": "00:00:204,000",
+        "end_ms": "00:00:207,900",
+        "text": "Cada verano se convoca a voluntarios."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 52,
+      "src": {
+        "start_ms": "00:00:208,000",
+        "end_ms": "00:00:211,900",
+        "text": "志愿者需要接受两周培训。"
+      },
+      "tgt": {
+        "start_ms": "00:00:208,000",
+        "end_ms": "00:00:211,900",
+        "text": "Los voluntarios reciben dos semanas de formación."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 53,
+      "src": {
+        "start_ms": "00:00:212,000",
+        "end_ms": "00:00:215,900",
+        "text": "培训由馆内的研究人员负责。"
+      },
+      "tgt": {
+        "start_ms": "00:00:212,000",
+        "end_ms": "00:00:215,900",
+        "text": "La formación corre a cargo de los investigadores del museo."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 54,
+      "src": {
+        "start_ms": "00:00:216,000",
+        "end_ms": "00:00:219,900",
+        "text": "研究工作主要集中在陶瓷和金属器。"
+      },
+      "tgt": {
+        "start_ms": "00:00:216,000",
+        "end_ms": "00:00:219,900",
+        "text": "La investigación se centra sobre todo en cerámicas y objetos metálicos."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 55,
+      "src": {
+        "start_ms": "00:00:220,000",
+        "end_ms": "00:00:223,900",
+        "text": "实验室配备了便携式检测设备。"
+      },
+      "tgt": {
+        "start_ms": "00:00:220,000",
+        "end_ms": "00:00:223,900",
+        "text": "El laboratorio cuenta con equipos portátiles de análisis."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 56,
+      "src": {
+        "start_ms": "00:00:224,000",
+        "end_ms": "00:00:227,900",
+        "text": "部分检测可以在展柜旁完成。"
+      },
+      "tgt": {
+        "start_ms": "00:00:224,000",
+        "end_ms": "00:00:227,900",
+        "text": "Algunos análisis pueden realizarse junto a las vitrinas."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 57,
+      "src": {
+        "start_ms": "00:00:228,000",
+        "end_ms": "00:00:231,900",
+        "text": "这样能减少文物搬运的风险。"
+      },
+      "tgt": {
+        "start_ms": "00:00:228,000",
+        "end_ms": "00:00:231,900",
+        "text": "Así se reduce el riesgo de trasladar las piezas."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 58,
+      "src": {
+        "start_ms": "00:00:232,000",
+        "end_ms": "00:00:235,900",
+        "text": "所有修复记录都会公开。"
+      },
+      "tgt": {
+        "start_ms": "00:00:232,000",
+        "end_ms": "00:00:235,900",
+        "text": "Todos los registros de restauración se hacen públicos."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 59,
+      "src": {
+        "start_ms": "00:00:236,000",
+        "end_ms": "00:00:239,900",
+        "text": "数据库可以在网站上查询。"
+      },
+      "tgt": {
+        "start_ms": "00:00:236,000",
+        "end_ms": "00:00:239,900",
+        "text": "La base de datos puede consultarse en el sitio web."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 60,
+      "src": {
+        "start_ms": "00:00:240,000",
+        "end_ms": "00:00:243,900",
+        "text": "感谢各位的参观。"
+      },
+      "tgt": {
+        "start_ms": "00:00:240,000",
+        "end_ms": "00:00:243,900",
+        "text": "Gracias por su visita."
+      },
+      "notes": ""
+    },
+    {
+      "sent_id": 61,
+      "src": {
+        "start_ms": "00:00:244,000",
+        "end_ms": "00:00:247,900",
+        "text": "出口在展厅的左手边。"
+      },
+      "tgt": {
+        "start_ms": "00:00:244,000",
+        "end_ms": "00:00:247,900",
+        "text": "La salida está a la izquierda de la sala."
+      },
+      "notes": ""
+    }
+  ],
+  "info": {
+    "align_time": "2026-01-01 00:00:00",
+    "note": "合成夹具，内容全部虚构"
+  }
+}
