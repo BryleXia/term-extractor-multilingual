@@ -106,13 +106,36 @@ getterms/               流水线本体
   corpus.py             读 zip / 散装 json，语料审计与异常还原
   extract.py            锚定、校验、纠正重试、形态还原、交付归一化
   llm.py                客户端、重试退避、响应缓存
+  profiles.py           每个模型「发什么参数、不发什么参数」的剖面
   run.py                主控：闸门链、并发派发、熔断、导出
   verify.py             交付门禁
   writer.py             xlsx / zip / 交付文档生成
-  selfcheck.py          零成本自检（只读已落盘 dump）
+  report.py             运行报告：调用数、token、成本、校验失败率、异常处置
   plural_lexicon.py     惯用复数清单（带出处）
+  promptcheck.py        提示词自检：示例本身必须遵守提示词自己定的规则
   prompts/              三语提示词，各 8 个迭代版本
   tests.py              断言套件
+  tests_fr.py           法语轮次的断言，单独一个文件
+  tests_ru.py           俄语轮次的断言，单独一个文件
+
+  选型与质检 —— 这些要读 bake-off dump 或语料，在本副本里跑不起来（见上）
+  bakeoff.py            模型 bake-off 本体
+  bakeoff_review.py     生成给语言老师的人工审阅表
+  small_sample.py       给语言老师看的一页纸小样
+  confirm_plural.py     复数判据的内部对照表
+  quality.py            从 dump 里算「过抽 / 漏抽」的可量化指标
+  span_defects.py       术语 span 缺陷剖面，改提示词后拿它做回归
+  qc_workbook.py        term_qc 人工核对工作簿（**不进交付 zip**）
+  selfcheck.py          零成本自检（只读已落盘 dump）
+  probe.py              交付剖面与 term_qc 工作清单
+  audit.py              语料审计：跑一遍 corpus.py，复核异常清单
+  diag_anomalies.py     针对审计中发现的两处不符做定点核查（一次性）
+
+  运行探针 —— 这些需要真 key
+  smoke.py              推理档位冒烟验收
+  direct_probe.py       验证中转站是否忠实转发推理档位
+  __init__.py           包标记
+
 e2e/                    端到端脚本（零 API 调用）
 fixtures/               合成语料夹具
 ```
@@ -150,13 +173,15 @@ python -m getterms.run --lang es --model <model> --effort high \
 会**当场打印 `[跳过]` 并说明原因**（不是静默通过）。同一套代码在带语料的内部环境里
 跑满 922 条。
 
-## 公开副本与内部版的三处差异
+## 公开副本与内部版的四处差异
 
 1. `fixtures/` 是**自造**的合成语料（虚构的城市与博物馆），只为让 `e2e/` 能独立跑。
 2. `e2e/*.py` 里多了两段：把仓库根加进 `sys.path`、给一个哑 key。
    两者都只为了让**任何人克隆下来就能跑**。
 3. `tests.py` / `tests_fr.py` / `tests_ru.py` 里加了语料与 dump 的存在性守卫，
    缺了就**可见地跳过**而不是崩掉或静默通过。
+4. `run.py` 里的 `DELIVERY_NOTE_NAME` 用**下游工具方**这个角色称谓，
+   而不是某位同事的姓名 —— 这样本仓库里不出现任何第三方的名字。
 
 ---
 

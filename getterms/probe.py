@@ -69,7 +69,7 @@ def load(lang: str, source: str | None = None) -> tuple[list[dict], Path]:
             "file": r.get("file", ""), "sent_id": r.get("sent_id"),
             "layer": r.get("layer", "?"),
             "zh": r.get(f"term_{other}") or "",
-            # ⚠ `deliv` 必须是**归一化之后**的值 —— 那才是王敬真正拿到的东西。
+            # ⚠ `deliv` 必须是**归一化之后**的值 —— 那才是下游工具方真正拿到的东西。
             #   bake-off 的 dump 故意不过 `unify_dict_forms` / `normalize_delivery`
             #   （否则 A/B 不可比），所以这里在内存里补上。
             #   第一版没做，于是「引号不配对」把 `Yan’an` 的**撇号**当成收引号，

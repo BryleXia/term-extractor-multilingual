@@ -105,7 +105,7 @@ def pack_zip(xlsx_paths: list[Path], out_dir: Path,
     if not xlsx_paths:
         return None
     zp = out_dir / cfg.zip_name
-    # 原子落盘：这份 zip 是交给王敬的那个，不能出现半截文件。
+    # 原子落盘：这份 zip 是交给下游工具方的那个，不能出现半截文件。
     ztmp = zp.with_name(zp.name + f".tmp{os.getpid()}")
     try:
         with zipfile.ZipFile(ztmp, "w", zipfile.ZIP_DEFLATED) as z:
@@ -208,7 +208,7 @@ FIELD_SPEC_TEMPLATE = """# 术语表字段说明与 final.json 映射
 与 3.0 一致 —— **但有个例外**：极少数输入文件名本身就是点号式
 （`…_align.qc.json` → `…_algin.qc.json` 之类，上游命名不规范），
 按 `replaceOutName()` 出来会是 `….term.xlsx` 而不是 `…_term.xlsx`。
-**具体哪几个见随包的 `交付说明_给王敬.md`**，合并前统一改名即可。
+**具体哪几个见随包的 `交付说明_给下游工具方.md`**，合并前统一改名即可。
 
 一行 = 一条术语。同一句有多条术语时，`sent_id` / `src_text` / `tgt_text` 三列**重复**出现。
 
@@ -218,7 +218,7 @@ FIELD_SPEC_TEMPLATE = """# 术语表字段说明与 final.json 映射
 **与上游原文件不一致**（`src_text` / `tgt_text` 不受影响，仍是逐字原文）。
 **这批文件请按数组顺序关联（第 i 行对第 i 句），不要按 `sent_id` 关联。**
 具体是哪几个文件、以及每个文件的全部上游异常，见随包附的
-`交付说明_给王敬.md` 第三节 —— **那份和我们给您的不是同一份文件，请一并取用**。
+`交付说明_给下游工具方.md` 第三节 —— **那份和我们给您的不是同一份文件，请一并取用**。
 
 ⚠ **不要拿 2.9（`term_qc`）的表头当模板接本表。** 2.9 也是 9 列，但第 7/8/9 列是
 `editor_student` / `editor_teacher` / `note`；本表是 `note` / `term_src_dict` /

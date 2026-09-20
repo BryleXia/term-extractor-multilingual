@@ -23,7 +23,7 @@ from .config import CORPUS_DIR
 # 上游把 align 拼错的三种写法（法语语料实测，西语没有）。
 # 不归一化的话按 HTML 规则会产出 `..._algin.qc_term.xlsx` 这种带错别字
 # 又带多余 `.qc` 的名字。用户已定：我们纠正拼写，输出干净名字，
-# 并在交付说明里给王敬逐条映射表（这是与 HTML 的第三处有意差异）。
+# 并在交付说明里给下游工具方逐条映射表（这是与 HTML 的第三处有意差异）。
 #
 # ⚠ 只改「拼错的 align」。`_align.json`（缺 `.qc`，法语有 23 个）**不动** ——
 #   align 拼写是对的，少 `.qc` 是上游流程差异不是错字。
@@ -48,7 +48,7 @@ def normalize_basename(name: str) -> tuple[str, str | None]:
     """纠正上游文件名里的 align 拼写错误、重复下载后缀与游离空格。
 
     返回 (归一化后的名字, 说明或 None)。说明会进 CorpusFile.notes，
-    并在交付说明里给王敬逐条映射表。
+    并在交付说明里给下游工具方逐条映射表。
     """
     fixed = _DUP_SUFFIX.sub("", name)
     fixed = _STRAY_SPACE.sub("", fixed)
@@ -105,7 +105,7 @@ def repair_json(text: str, max_fix: int = 40) -> tuple[object, list[str]]:
     法语语料实测：6 个 conf_poli 文件在第 7 行 `"session_no": "0035"` 后**缺一个逗号**，
     其中 `zh-fr_conf_poli_0011_seg002` 还多一个尾逗号。这些文件 `json.loads` 直接抛错，
     退回贪婪正则 `[...]` 只能救回句子数组（丢顶层 meta），最坏的那个连正则也救不回来
-    —— **王敬的 HTML 工具用的是同一个正则兜底，所以她会整文件丢掉那 123 句。**
+    —— **下游工具方的 HTML 工具用的是同一个正则兜底，所以它会整文件丢掉那 123 句。**
 
     做法是**错误驱动的定点修复**，不是通用 JSON 修补器：只认两种错，
     改一处就重新 parse，其他错一律放弃并记账。实测对 612 个法语条目里的
@@ -296,7 +296,7 @@ def _recover_shifted(item: dict) -> tuple[str, str] | None:
         notes: "<法文正文>"
 
     不还原的后果：`src` 是时间轴 -> `is_meaningful` 判假 -> 整句被过滤，
-    **这 11 个文件一个术语都出不来、一份 xlsx 都不产出**。王敬的工具更糟：
+    **这 11 个文件一个术语都出不来、一份 xlsx 都不产出**。下游那套 HTML 工具更糟：
     她的 `get_text` 取 `x.text`，会把时间轴当中文喂给模型，产出垃圾术语。
 
     返回 (中文, 外文) 或 None（判不出来就别硬猜，交回原样并记账）。

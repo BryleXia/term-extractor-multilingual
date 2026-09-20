@@ -65,7 +65,7 @@ def main(argv=None) -> int:
     # --- 新增 C：文件名拼写纠正（与 HTML 的第三处有意差异）
     renamed = [f for f in files if any("拼写已纠正" in n for n in f.notes)]
     print(f"\n[新增 C] 文件名拼写已纠正: {len(renamed)}（这是与 HTML 的有意差异，"
-          f"映射表要给王敬）")
+          f"映射表要给下游工具方）")
     for f in renamed:
         print(f"    {f.basename}  ->  {f.out_name}")
 

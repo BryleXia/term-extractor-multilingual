@@ -146,7 +146,7 @@ def _corpus(check) -> None:
         bad = sum(s.src.count("生船机") + s.tgt.count("生船机") for s in ft.sentences)
         good = sum(s.src.count("升船机") + s.tgt.count("升船机") for s in ft.sentences)
         check("conf_tech_0001_seg005 的「生船机」错字 7 处", bad == 7, f"实际 {bad}")
-        # 更值得报给王敬的是这一条：同一个文件里两种写法并存（第 59 句是对的），
+        # 更值得报给下游工具方的是这一条：同一个文件里两种写法并存（第 59 句是对的），
         # 所以术语库会拿到两个条目指向同一概念，而逐字锚定要求我们两个都如实收录。
         check("同一文件里正确写法「升船机」只有 1 处（两种写法并存）", good == 1,
               f"实际 {good}")

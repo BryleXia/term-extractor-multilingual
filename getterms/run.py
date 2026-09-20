@@ -38,7 +38,7 @@ def build_args(argv=None):
                    help="默认按语种取 <lang>_v3 / <lang>_v1")
     p.add_argument("--batch-size", type=int, default=10,
                    help="默认 10 = 我们的既定口径（全量预算、质量基线、缓存键都按 10 定的）"
-                        "；王敬 HTML 工具的默认值是 5")
+                        "；下游 HTML 工具的默认值是 5")
     p.add_argument("--concurrency", type=int, default=8)
     p.add_argument("--out", default=None, help="默认 out/<lang>")
     p.add_argument("--lang", default="es", help="es / fr / ru，决定语料目录与默认提示词")
@@ -85,10 +85,10 @@ def build_args(argv=None):
 # 失败批闸门：超过这个比例就不产出交付包。xlsx 照旧写出，不受影响。
 INCOMPLETE_GATE = 0.002
 
-# 给王敬的交付说明 —— **随 zip 一起发**。仓库根目录下这一份。
+# 给下游工具方的交付说明 —— **随 zip 一起发**。仓库根目录下这一份。
 # 它装着「上游数据里需要你知道的问题」全套（sent_id 重编的 12 个文件、异种 schema、
 # 键盘乱敲、字段错位……），而这些问题**只在我们这边的机读报告里**，对方看不见。
-DELIVERY_NOTE_NAME = "交付说明_给王敬.md"
+DELIVERY_NOTE_NAME = "交付说明_给下游工具方.md"
 
 
 # ⚠ 三语都指向带 `dict_form` 输出键的版本（2026-09-18 起，ISO 10241-1 / IATE 口径）。
@@ -731,7 +731,7 @@ async def main_async(a) -> int:
     # 交付前统一词典形：同一文件里同一中文术语 + 同一切片只能有一个词典形，
     # 否则交付物自相矛盾（`selfcheck` 的「结构性问题」档就是查这个）。$0，不重跑。
     # 行序按句序。⚠ 以前没有这一步：并发 worker 直接 extend、导出不排序，
-    # 所以行序 = **批完成顺序**（实测第 2 批整块排在第 1 批前面）。王敬的 HTML 工具
+    # 所以行序 = **批完成顺序**（实测第 2 批整块排在第 1 批前面）。下游工具方的 HTML 工具
     # 是串行的，她的产出永远按句序；我们 1,620 个 xlsx 行序随机、每次跑还不一样。
     # 稳定排序，只按 sent_id —— 同一句内术语的先后是模型给的语义顺序，不动。
     def _sid_key(r):
@@ -858,7 +858,7 @@ async def main_async(a) -> int:
             if not package_ok:
                 print(f"[闸门] 不完整批比例超过 {INCOMPLETE_GATE:.2%}，"
                       "**不产出 results.zip 与 README.md**。\n"
-                      "        交给王敬的包必须是完整的。请重跑同一条命令补齐失败批\n"
+                      "        交给下游工具方的包必须是完整的。请重跑同一条命令补齐失败批\n"
                       "        （缓存续跑，只花失败那几批的钱），"
                       "或确认后加 --allow-incomplete。\n"
                       "        xlsx 已经写好，不受影响。")
@@ -883,7 +883,7 @@ async def main_async(a) -> int:
     if written and package_ok:
         field_spec = write_field_spec(out_dir, rep.finished)
 
-    # ⚠ 给王敬的那份说明**也必须随包走**（2026-09-19 审计发现，之前不在 zip 里）。
+    # ⚠ 给下游工具方的那份说明**也必须随包走**（2026-09-19 审计发现，之前不在 zip 里）。
     #   它解释「为什么 12 个文件的 sent_id 与上游不一致、这批要按位置关联」，
     #   以及全部上游异常。它不在包里 = 对方拿到的是「承诺 + 数据」，
     #   而解释留在我们机器上 —— 这正是会被退回来的那类。

@@ -59,7 +59,7 @@ def _pure(check) -> None:
     check("`_align.json`（缺 .qc 但 align 拼对了）不动，照 HTML 规则",
           got == "a_align_term.xlsx" and note is None, f"实际 {got} / {note}")
     _, note = out_name_for("a_algin.qc.json")
-    check("纠正拼写会留下说明（要进给王敬的映射表）",
+    check("纠正拼写会留下说明（要进给下游工具方的映射表）",
           note is not None and "拼写已纠正" in note)
 
     # ---- SRT 时间轴识别（字段错位的触发条件；见 §1.3）

@@ -131,7 +131,7 @@ def build(meta: dict, rows: list, out: Path, only_changed: bool = False,
     banner(f"语种 {meta.get('lang')} ｜ 模型 {meta.get('model')} "
            f"{meta.get('effort') or '(默认)'} ｜ 提示词 {meta.get('prompt')} "
            f"(hash {meta.get('phash')})")
-    banner("交付给王敬的 xlsx 里只有「词典形」这一列；本表把它与原句切片、全句并排，"
+    banner("交付给下游工具方的 xlsx 里只有「词典形」这一列；本表把它与原句切片、全句并排，"
            "供人工判断还原是否正确。「已还原」= 是，说明交付值与句中形式不同。")
     if sampled_from:
         banner(f"⚠ 本表是**分层抽样**：从全量 {sampled_from:,} 条里按「层 × 是否还原」"
@@ -216,7 +216,7 @@ def main(argv=None) -> int:
     # 默认写进 `_qc/` 子目录，**不与交付 xlsx 同级**：
     #   * `pack_zip` 只打包它自己写出的文件，本来就不会收它；
     #   * 但 `verify` 会 glob 交付目录下的 `*.xlsx`，同级放会被当交付文件读（踩过）；
-    #   * 人工整目录拷给王敬时也不会顺手把它带过去。
+    #   * 人工整目录拷给下游工具方时也不会顺手把它带过去。
     dest = Path(a.output) if a.output else out_dir / "_qc" / "qc_词典形核对.xlsx"
 
     total = len(rows)

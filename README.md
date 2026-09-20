@@ -114,20 +114,44 @@ is produced** (exit code 3) rather than shipping an incomplete one.
 ## Layout
 
 ```
-getterms/               the pipeline
-  config.py             language registry, price table, paths
-  corpus.py             reads zips / loose json, audits and repairs corpus anomalies
-  extract.py            anchoring, validation, corrective retry, morphology, normalization
-  llm.py                client, retry backoff, response cache
-  run.py                main control: gate chain, dispatch, breakers, export
-  verify.py             delivery gate
-  writer.py             xlsx / zip / delivery-document generation
-  selfcheck.py          zero-cost self-check over already-cached dumps
-  plural_lexicon.py     habitually-plural lexicon, every entry sourced
-  prompts/              three languages, 8 iterations each
-  tests.py              assertion suite
-e2e/                    end-to-end scripts, zero API calls
-fixtures/               synthetic corpus fixture
+getterms/                the pipeline itself
+  config.py              language registry, price table, paths
+  corpus.py              reads zips / loose json, audits and repairs corpus anomalies
+  extract.py             anchoring, validation, corrective retry, morphology, normalization
+  llm.py                 client, retry backoff, response cache
+  profiles.py            what each model does and does not accept as wire parameters
+  run.py                 main control: gate chain, dispatch, breakers, export
+  verify.py              delivery gate
+  writer.py              xlsx / zip / delivery-document generation
+  report.py              run report: calls, tokens, cost, failure rates, anomaly handling
+  plural_lexicon.py      habitually-plural lexicon, every entry sourced
+  promptcheck.py         checks that the prompt examples obey the prompt's own rules
+  prompts/               three languages, 8 iterations each
+  tests.py               assertion suite
+  tests_fr.py            French-round assertions, kept in their own file
+  tests_ru.py            Russian-round assertions, kept in their own file
+
+  model selection and QA — these read the bake-off dumps or the corpus, so they
+  cannot run in this copy (see above)
+  bakeoff.py             the model bake-off itself
+  bakeoff_review.py      builds the human review sheet for the language teachers
+  small_sample.py        the one-page sample sent to the language teachers
+  confirm_plural.py      cross-check sheet for the plural criteria
+  quality.py             over- and under-extraction metrics computed from the dumps
+  span_defects.py        term-span defect profile, used as a prompt-edit regression
+  qc_workbook.py         the manual term_qc workbook (never enters the delivery zip)
+  selfcheck.py           zero-cost self-check over already-cached dumps
+  probe.py               delivery profile and term_qc worklist, read off the dumps
+  audit.py               corpus audit: re-runs corpus.py and checks the anomaly list
+  diag_anomalies.py      one-off diagnostics for two deviations found during that audit
+
+  operational probes — these need a live key
+  smoke.py               effort-level smoke test
+  direct_probe.py        probes whether a relay faithfully forwards the requested effort
+  __init__.py            package marker
+
+e2e/                     end-to-end scripts, zero API calls
+fixtures/                synthetic corpus fixture
 ```
 
 ## Quick start
@@ -164,7 +188,7 @@ suite here reports **540 passing** rather than 922: the corpus- and dump-depende
 blocks print a visible `[跳过] / skipped` line with the reason instead of silently
 passing. The same code, with the corpus present, runs all 922.
 
-## Three deliberate differences from the internal copy
+## Four deliberate differences from the internal copy
 
 1. `fixtures/` is a **synthetic, self-authored** corpus (a fictional city and
    museum), there only so that `e2e/` can run standalone.
@@ -173,6 +197,9 @@ passing. The same code, with the corpus present, runs all 922.
 3. `tests.py` / `tests_fr.py` / `tests_ru.py` gained existence guards for the
    corpus and the dumps — missing, they **skip visibly** rather than crash or
    silently pass.
+4. `DELIVERY_NOTE_NAME` in `run.py` names the delivery note for the **downstream
+   tool owner** rather than for a named colleague, so that no third party's name
+   appears anywhere in this repository.
 
 ---
 
