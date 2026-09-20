@@ -18,41 +18,7 @@ Input: **a sentence-aligned bilingual corpus** (one source sentence paired with 
 translation). Output: a set of `.xlsx` term tables — each row is one term, with its
 **position in the original sentence**, its **dictionary form**, and **type tags**.
 
-```
-    aligned corpus
-              │
-              ▼
-    ┌───────────────────┐
-    │  8 pre-flight     │   fail ──▶ stop: nothing runs, nothing is charged
-    │  gates            │
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  dispatch         │   concurrency 40 · every response cached by prompt hash
-    │                   │   breakers during the run: spend · 429 · balance
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  verbatim anchor  │   not found ──▶ one corrective retry
-    └─────────┬─────────┘   still missing ──▶ drop and record  (1 in 210,394)
-              │ found
-              ▼
-    ┌───────────────────┐
-    │  morphology       │   invalid ──▶ fall back to the surface form,
-    │  validation       │               never drop the term
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  9-column xlsx    │   verbatim span in 4/5 · dictionary form in 8/9
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  delivery gate    │   over threshold ──▶ exit 3, no package
-    └─────────┬─────────┘
-              │ pass
-              ▼
-          results.zip
-```
+![Pipeline: an aligned corpus passes eight pre-flight gates, then dispatch at concurrency 40, a verbatim anchor check, a morphology check, and a delivery gate that emits a 9-column xlsx. A term that cannot be anchored is dropped and recorded; a run that would ship an incomplete package exits 3.](docs/pipeline-flow.svg)
 
 Scale actually run:
 

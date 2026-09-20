@@ -17,41 +17,7 @@
 输出是一批 `.xlsx` 术语表：每一行是一条术语，带它在**原句里的位置**、
 它的**词条形式**、以及**类型标签**。
 
-```
-    aligned corpus
-              │
-              ▼
-    ┌───────────────────┐
-    │  8 pre-flight     │   fail ──▶ stop: nothing runs, nothing is charged
-    │  gates            │
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  dispatch         │   concurrency 40 · every response cached by prompt hash
-    │                   │   breakers during the run: spend · 429 · balance
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  verbatim anchor  │   not found ──▶ one corrective retry
-    └─────────┬─────────┘   still missing ──▶ drop and record  (1 in 210,394)
-              │ found
-              ▼
-    ┌───────────────────┐
-    │  morphology       │   invalid ──▶ fall back to the surface form,
-    │  validation       │               never drop the term
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  9-column xlsx    │   verbatim span in 4/5 · dictionary form in 8/9
-    └─────────┬─────────┘
-              ▼
-    ┌───────────────────┐
-    │  delivery gate    │   over threshold ──▶ exit 3, no package
-    └─────────┬─────────┘
-              │ pass
-              ▼
-          results.zip
-```
+![流程图：已对齐的语料先过八道开跑前闸门，再以并发 40 派发，经逐字锚定检查、形态校验、交付门禁，产出 9 列 xlsx。无法锚定的术语被丢弃并记账；会交出残缺包的一轮直接退出码 3。](docs/pipeline-flow.svg)
 
 跑过的规模：
 
