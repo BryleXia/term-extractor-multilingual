@@ -1,0 +1,40 @@
+# Credentials
+.env
+keys/
+api-keys/
+*.key
+*credentials*
+
+# Corpus and audio (third-party content)
+corpus/
+*.srt
+*.m4a
+*.wav
+*.WAV
+*.aac
+*.mp3
+*.flac
+*.mp4
+
+# Run output and model output
+out/
+cache/
+logs/
+archive/
+*.zip
+*.xlsx
+*.xls
+*.jsonl
+
+# Scratch files
+*.png
+*.jpg
+交付说明_*.md
+[0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
